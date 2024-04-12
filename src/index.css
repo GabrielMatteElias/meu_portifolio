@@ -1,0 +1,15 @@
+body {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  background-image: url('./img/fundo.jpg'); /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho real da sua imagem */
+  background-size: cover; /* Isso faz com que a imagem cubra todo o fundo */
+  background-position: center; /* Isso centraliza a imagem */
+  
+}
+
+:root {
+  font-size: 62.5%;
+}

@@ -1,0 +1,18 @@
+.header {
+    background-color: rgba(0, 0, 0, 0.719);
+    height: 5rem;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(13px);
+    z-index: 100;
+}
+
+.header a{
+    cursor: pointer;
+    font-size: 15.616px;
+}
