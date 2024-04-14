@@ -13,3 +13,21 @@ body {
 :root {
   font-size: 62.5%;
 }
+
+a{
+  text-decoration: none;
+}
+
+/* Demonstração de uma barra de rolagem personalizada
+  * (não será visível ao menos que a largura/altura seja especificada) */
+::-webkit-scrollbar {
+  width: 1rem;
+  height: .5rem;
+  background-color: #aaa; /* ou que isso seja adicionado ao "caminho" da barra */
+}
+
+/* Adiciona a barra arrastável */
+::-webkit-scrollbar-thumb {
+    background: #c1e207;
+    width: 2rem;
+}

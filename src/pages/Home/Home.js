@@ -25,7 +25,7 @@ AOS.init();
 
 const Home = () => {
 
-  const [openModal, setOpenModal] = useState(true)
+  const [openModal, setOpenModal] = useState(false)
 
   return (
     <>
@@ -44,14 +44,15 @@ const Home = () => {
 
             <h2>Sobre mim</h2>
             <p>
-              Desenvolvedor Front-end com experiência em React.js, JavaScript, Material UI e consumo de APIs REST. Apaixonado por tecnologias e programação.
-              Também possui experiência em projetos gerenciados por Metodologias Ágeis. Cursando Análise e desenvolvimento de sistema.
+              Oi pessoal! Eu sou um Dev Front-end que curte muito trabalhar com React.js, JavaScript, Material UI e mexer com APIs REST. Adoro tudo que envolva tecnologia e programação.
+              Também possuo experiência em projetos gerenciados por Metodologias Ágeis. Ah, e tô na jornada de cursar Análise e Desenvolvimento de Sistemas, sempre buscando aprender
+              mais e ficar por dentro das novidades do mundo tech! 👨‍💻.
             </p>
           </div>
         </div>
 
 
-        <div className='subcontainer-skills' data-aos="fade-right">
+        <div className='subcontainer-skills' data-aos="fade-right" id="secao1">
           <div className='container' >
             <h3>Habilidades</h3>
             <div className='subcontainer-skills-items'>
@@ -176,7 +177,22 @@ const Home = () => {
               <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
             </svg>
           </div>
+
           <div className='modal-body'>
+            <div>
+              <div className='modal-description'>
+                <div className='modal-title'>
+                  <h2>Clone Whatsapp</h2>
+                </div>
+                <p>Recriei a interface do whatsapp utilizando React.js, HTML5, Javascript e TailWindCSS. Quando me foi proposto este projeto a ideia era
+                  criar uma interface para facilitar a visualização das conversas entre funcionários e clientes de uma empresa, como se fosse um backup
+                  com um tela amigável, e não um chat em tempo real como o whatsapp. No menu lateral, os funcionários podem encontrar os números de telefone
+                  da empresa, e ao clicar em cada número, eles podem ver as conversas com os clientes associados a esse número.
+                </p>
+                <span>Outubro de 2023</span>
+              </div>
+            </div>
+
             <div className='modal-video-buttons'>
               <div className='modal-video'>
                 <video controls>
@@ -185,27 +201,13 @@ const Home = () => {
               </div>
 
               <div className='modal-buttons'>
-                <a className='link-project' href='https://github.com/GabrielMatteElias/clone-whatsapp' target='_blank'>
+                <a className='link-project' href='https://github.com/GabrielMatteElias/clone-whatsapp/tree/master' rel="noreferrer" target='_blank'>
                   Repositório Github
-                  <img src={rightArrow} width={22} />
+                  <img src={rightArrow} width={22} alt='Seta' />
                 </a>
               </div>
             </div>
 
-            <div>
-              <div className='modal-description'>
-                <div className='modal-title'>
-                  <h2>Clone Whatsapp</h2>
-                </div>
-                <p>Recriei a interface do whatsapp utilizando React.js, HTML5, Javascript e TailWindCSS. Quando me foi proposto este projeto a ideia era
-                  criar uma interface para facilitar a visualização das conversas entre funcionários e clientes de uma empresa, como se fosse um backup
-                  com um tela amigável, e não um chat em tempo real como o whatsapp. Para explicar um pouco o funcionamento, no menu da esquerda temos os
-                  telefones usados pelos funcionários da empresa e dentro do menu sanfona de cada número há os whatsapp dos clientes contactados pelo
-                  mesmo podendo acessar a conversa entre ambos.
-                </p>
-                <span>Outubro de 2023</span>
-              </div>
-            </div>
           </div>
         </div>
 
