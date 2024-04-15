@@ -15,7 +15,9 @@ import DockerSVG from '../../img/docker-svgrepo-com.svg'
 import rightArrow from '../../img/right-arrow-alt-svgrepo-com.svg'
 
 /*MIDIA PROJETOS*/
-import cloneWhatsClipe from "../../img/clone-whatsapp-clipe.mp4"
+import cloneWhatsClipe from "../../img/clone-whats-clipe.mp4"
+import buscaCepClipe from "../../img/buscador-cep.mp4"
+
 
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import AOS from 'aos';
@@ -25,11 +27,13 @@ AOS.init();
 
 const Home = () => {
 
-  const [openModal, setOpenModal] = useState(false)
+  const [openModalWhats, setOpenModalWhats] = useState(false)
+  const [openModalCep, setOpenModalCep] = useState(false)
+
 
   return (
     <>
-      <div className='home' style={{ overflow: openModal ? 'hidden' : '' }}>
+      <div className='home' style={{ overflow: openModalWhats || openModalCep ? 'hidden' : '' }}>
 
         <div className='first-section'>
           <div className='container'>
@@ -123,7 +127,7 @@ const Home = () => {
             <h3>Projetos</h3>
             <div className='projects-items'>
 
-              <div className='card-projects p-1' onClick={() => setOpenModal(true)}>
+              <div className='card-projects p-1' onClick={() => setOpenModalWhats(true)}>
                 <div className='projects-info'>
                   <p>Clone Whatsapp</p>
                   <div>
@@ -134,17 +138,17 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className='card-projects p-2' onClick={() => setOpenModal(true)}>
+              <div className='card-projects p-2' onClick={() => setOpenModalCep(true)}>
                 <div className='projects-info'>
                   <p>Busca CEP</p>
                   <div>
-                    <img src={jsSVG} width={30} alt='css' title='Docker' />
-                    <img src={cssSVG} width={30} alt='css' title='Python' />
-                    <img src={htmlsSVG} width={30} alt='css' title='Python' />
+                    <img src={jsSVG} width={30} alt='css' title='JavaScript' />
+                    <img src={cssSVG} width={30} alt='css' title='CSS' />
+                    <img src={htmlsSVG} width={30} alt='css' title='HTML' />
                   </div>
                 </div>
               </div>
-              <div className='card-projects p-3' onClick={() => setOpenModal(true)}>
+              <div className='card-projects p-3' onClick={() => setOpenModalCep(true)}>
                 <div className='projects-info'>
                   <p>Busca CEP</p>
                   <div>
@@ -153,7 +157,7 @@ const Home = () => {
                     <img src={htmlsSVG} width={30} alt='css' title='Python' />
                   </div>
                 </div>                </div>
-              <div className='card-projects p-4' onClick={() => setOpenModal(true)}>
+              <div className='card-projects p-4' onClick={() => setOpenModalCep(true)}>
                 <div className='projects-info'>
                   <p>Busca CEP</p>
                   <div>
@@ -168,12 +172,12 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className='modal-background' style={{ display: openModal ? '' : 'none' }}></div>
-      <div className='modal-info-project' style={{ display: openModal ? '' : 'none' }}>
+      <div className='modal-background' style={{ display: openModalWhats || openModalCep ? '' : 'none' }}></div>
 
+      <div className='modal-info-project' style={{ display: openModalWhats ? '' : 'none' }}>
         <div>
           <div className='modal-close-icon'>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" className='icon-close-modal' onClick={() => setOpenModal(false)}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" className='icon-close-modal' onClick={() => setOpenModalWhats(false)}>
               <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
             </svg>
           </div>
@@ -202,6 +206,49 @@ const Home = () => {
 
               <div className='modal-buttons'>
                 <a className='link-project' href='https://github.com/GabrielMatteElias/clone-whatsapp/tree/master' rel="noreferrer" target='_blank'>
+                  Repositório Github
+                  <img src={rightArrow} width={22} alt='Seta' />
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div className='modal-info-project' style={{ display: openModalCep ? '' : 'none' }}>
+        <div>
+          <div className='modal-close-icon'>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" className='icon-close-modal' onClick={() => setOpenModalCep(false)}>
+              <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+            </svg>
+          </div>
+
+          <div className='modal-body'>
+            <div>
+              <div className='modal-description'>
+                <div className='modal-title'>
+                  <h2>Busca CEP</h2>
+                </div>
+                <p>
+                  Este projeto foi concebido para elevar meu domínio em HTML, CSS e JavaScript Vanilla, ao mesmo tempo que explorei
+                  a integração de duas API's distintas. Uma delas é responsável por extrair informações do CEP inserido, enquanto a outra
+                  busca e exibe imagens da cidade correspondente, utilizando os dados previamente adquiridos.
+                </p>
+                <span>Fevereiro de 2023</span>
+              </div>
+            </div>
+
+            <div className='modal-video-buttons'>
+              <div className='modal-video'>
+                <video controls>
+                  <source src={buscaCepClipe} type="video/mp4" />
+                </video>
+              </div>
+
+              <div className='modal-buttons'>
+                <a className='link-project' href='https://github.com/GabrielMatteElias/zip-searcher' rel="noreferrer" target='_blank'>
                   Repositório Github
                   <img src={rightArrow} width={22} alt='Seta' />
                 </a>
